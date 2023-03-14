@@ -100,7 +100,7 @@ nav {
 }
 
 .firstDiv {
-    margin-top: 25vh;
+    margin-top: 17vh;
 }
 
 .Book_Table_Btn {
@@ -111,12 +111,13 @@ nav {
     height: 15vh;
     margin: auto;
     background-color: #c8c2a6;
+
 }
 
 .Book_Table_Btn p {
     color: #544d47;
     font-family: 'Righteous', cursive;
-    text-shadow: 2px 2px 0 #000;
+    text-shadow: 1px 1px 0 #000;
     font-size: 40px;
     line-height: 35px;
     font-weight: normal;
@@ -140,7 +141,7 @@ nav {
 .Menu_Btn p {
     color: #544d47;
     font-family: 'Righteous', cursive;
-    text-shadow: 2px 2px 0 #000;
+    text-shadow: 1px 1px 0 #000;
     font-size: 40px;
     line-height: 35px;
     font-weight: normal;
@@ -170,9 +171,9 @@ h1 {
 
 
 h2 {
-    font-size: 30px;
+    font-size: 35px;
     letter-spacing: -1px;
-    color: #DFBF84;
+    color: #ffffff;
     text-transform: uppercase;
     text-shadow: 1px 1px 0 #000;
     margin: 10px 0 24px;
@@ -192,7 +193,7 @@ p {
 
 h3 {
     font-size: 25px;
-    color: #DFBF84;
+    color: #e4d2b2;
     text-shadow: 1px 1px 0 #000;
     margin-bottom: 10px;
     line-height: 10px;
@@ -229,4 +230,78 @@ a {
 a:hover {
     color: #da9650;
     text-decoration: blink;
+}
+
+.menuTitle {
+    width: 100vw;
+    height: auto;
+    background-color: #c6b79c;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-bottom: 30px;
+}
+
+.menuTitle p {
+    color: #544d47;
+    font-family: 'Orienta', sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    margin: 0 0 24px;
+    text-align: center;
+}
+
+.menuTitle h2 {
+    font-size: 35px;
+    letter-spacing: -1px;
+    color: #544d47;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 0 #000;
+    margin: 10px 0 24px;
+    text-align: center;
+    line-height: 50px;
+}
+
+.menuItem {
+    width: 100vw;
+    height: auto;
+    margin-bottom: 40px;
+}
+
+.menuItem h2 {
+    font-size: 35px;
+    letter-spacing: -1px;
+    text-transform: none;
+    color: #e4d2b2;
+    text-shadow: 1px 1px 0 #000;
+    margin: 10px;
+    text-align: left;
+    line-height: 5px;
+}
+
+.menuItem h3 {
+    font-size: 25px;
+    color: #e4d2b2;
+    text-shadow: 1px 1px 0 #000;
+    margin-bottom: 10px;
+    line-height: 10px;
+    margin-left: 10px;
+}
+
+.menuItem p {
+    color: #f6f6f6;
+    font-family: 'Orienta', sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    margin: 0 0 24px;
+    margin-left: 10px;
+    text-align: left;
+}
+
+.orderbtn {
+    font-size: 16px;
+    color: #544d47;
+    margin-left: 10px;
+    border-radius: 20px;
+    background-color: #e4d2b2;
+    padding: 7px;
 }

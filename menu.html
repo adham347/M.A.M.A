@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>M.A.M.A</title>
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no"
+        name="viewport" />
+    <link rel="stylesheet" type="text/css" href="main.css" />
+</head>
+
+<body>
+    <nav>
+        <a href="index.html"><img class="navlogo" src="assets/mamaLogo.jpg"></a>
+        <a onclick="openNav()"><img class="NavIcon" src="assets/menu icon.png"></a>
+    </nav>
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="index.html" class="active">Home</a>
+    </div>
+    <script>
+        /* Set the width of the side navigation to 250px and the left margin of the page content to 250px */
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+            document.getElementById("main").style.marginLeft = "250px";
+        }
+
+        /* Set the width of the side navigation to 0 and the left margin of the page content to 0 */
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+            document.getElementById("main").style.marginLeft = "0";
+        }       
+    </script>
+    <div class="firstDiv"></div>
+
+    <div class="menuTitle">
+        <h2>neapolitan pizza</h2>
+        <p>Our true artisanal Neapolitan pizzas respect all the traditions and techniques that have made it
+            world-famous. They are handcrafted by using quality local and imported Italian ingredients, in a real
+            AVPN-approved handmade Neapolitan oven!</p>
+    </div>
+
+    <div class="menuItem">
+        <h2>Marinara</h2>
+        <h3> the sailor's pie</h3>
+        <br>
+        <p>This is how it all started. Tomatoes were abundant, bread was cheap. Bakers put the two together. Sailors
+            made it their go-to meal for long voyages, hence the name (marinaro=sailor in Italian). The original
+            Neapolitan street food.</p>
+        <p><b>Components: Italian Tomatoes, Oregano, Garlic, Extra Virgin Olive Oil </b></p>
+        <p><b><i>125 LE</i></b></p>
+        <button class="orderbtn">
+            <b>add to order</b>
+        </button>
+        <hr>
+    </div>
+
+    <div class="menuItem">
+        <h2>Cosacca</h2>
+        <h3>the king’s pie</h3>
+        <br>
+        <p>This simple pizza was created in honour of the Russian King Nicholas II during his visit to Napoli.
+        </p>
+        <p><b>Components: Italian Tomatoes, Garlic, Oregano, Parmigiano Reggiano DOP, Fresh Basil, Extra Virgin Olive
+                Oil, Black
+                Pepper</b></p>
+        <p><b><i>175 LE</i></b></p>
+        <button class="orderbtn">
+            <b>add to order</b>
+        </button>
+        <hr>
+    </div>
+
+    <div class="menuItem">
+        <h2>Scarpariello</h2>
+        <h3>the shoemaker’s pie</h3>
+        <br>
+        <p>It is said that shoemakers invented this recipe (scarparo = shoemaker in the Neapolitan dialect) out of a
+            desire to eat something quick, tasty and nutritious while working. Also traditionally a pasta dish.</p>
+        <p><b>Components: Italian Tomatoes, Garlic, Italian Sun-dried Tomatoes, Oregano, Parmigiano Reggiano DOP, Fresh
+                Basil, Extra Virgin Olive Oil, Black Pepper </b></p>
+        <p><b><i>195 LE</i></b></p>
+        <button class="orderbtn">
+            <b>add to order</b>
+        </button>
+        <hr>
+    </div>
+
+    <div class="menuItem">
+        <h2>Diavola</h2>
+        <h3>the devil’s pie</h3>
+        <br>
+        <p>TBefore the “pepperoni” pizzas you know, Neapolitans put spicy salami on a Margherita base. As the name
+            suggests, this fiery combo is perfect for those looking for a flavourful kick to their pizza. </p>
+        <p><b>Components: Italian Tomatoes, Fresh Mozzarella, Salami, Chilli flakes, Fresh Basil, Parmigiano Reggiano
+                DOP, Extra Virgin Olive Oil </b></p>
+        <p><b><i>270 LE</i></b></p>
+        <button class="orderbtn">
+            <b>add to order</b>
+        </button>
+        <hr>
+    </div>
+
+    <div class="menuItem">
+        <h2>Romana</h2>
+        <h3>the roman pie</h3>
+        <br>
+        <p>In Rome, it’s called a Neapolitan. But we make Neapolitan pizza, so for us, this anchovy-topped Margherita is
+            Roman.</p>
+        <p><b>Components: Italian Tomatoes, Fresh Mozzarella, Anchovies, Fresh Basil, Parmigiano Reggiano DOP, Extra
+                Virgin Olive Oil </b></p>
+        <p><b><i>285 LE</i></b></p>
+        <button class="orderbtn">
+            <b>add to order</b>
+        </button>
+        <hr>
+    </div>
+</body>
+
+<div class="menuItem">
+    <h2>Capricciosa</h2>
+    <h3>the wild one</h3>
+    <br>
+    <p>The ‘Capricious’ brings together a medley of flavour with its blend of mushrooms, air-dried salami and sautéed
+        artichokes.p>
+    <p><b>Components: Italian Tomatoes, Fresh Mozzarella, Mushrooms, Salami, Sliced Artichokes, Fresh Basil, Parmigiano
+            Reggiano DOP, Extra Virgin Olive Oil</b></p>
+    <p><b><i>295 LE</i></b></p>
+    <button class="orderbtn">
+        <b>add to order</b>
+    </button>
+    <hr>
+</div>
+
+</html>
