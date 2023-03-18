@@ -117,7 +117,6 @@ nav {
 .Book_Table_Btn p {
     color: #544d47;
     font-family: 'Righteous', cursive;
-    text-shadow: 1px 1px 0 #000;
     font-size: 40px;
     line-height: 35px;
     font-weight: normal;
@@ -141,7 +140,6 @@ nav {
 .Menu_Btn p {
     color: #544d47;
     font-family: 'Righteous', cursive;
-    text-shadow: 1px 1px 0 #000;
     font-size: 40px;
     line-height: 35px;
     font-weight: normal;
