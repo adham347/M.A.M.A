@@ -10,7 +10,9 @@
     <link rel="stylesheet" type="text/css" href="main.css" />
 </head>
 
+
 <body>
+    <script type="module" src="menuController.js"></script>
     <nav>
         <a href="index.html"><img class="navlogo" src="assets/mamaLogo.jpg"></a>
         <a onclick="openNav()"><img class="NavIcon" src="assets/menu icon.png"></a>
@@ -50,7 +52,7 @@
             Neapolitan street food.</p>
         <p><b>Components: Italian Tomatoes, Oregano, Garlic, Extra Virgin Olive Oil </b></p>
         <p><b><i>125 LE</i></b></p>
-        <button class="orderbtn">
+        <button class="orderbtn" id="Marinara">
             <b>add to order</b>
         </button>
         <hr>
@@ -66,7 +68,7 @@
                 Oil, Black
                 Pepper</b></p>
         <p><b><i>175 LE</i></b></p>
-        <button class="orderbtn">
+        <button class="orderbtn" id="Cosacca">
             <b>add to order</b>
         </button>
         <hr>
@@ -81,7 +83,7 @@
         <p><b>Components: Italian Tomatoes, Garlic, Italian Sun-dried Tomatoes, Oregano, Parmigiano Reggiano DOP, Fresh
                 Basil, Extra Virgin Olive Oil, Black Pepper </b></p>
         <p><b><i>195 LE</i></b></p>
-        <button class="orderbtn">
+        <button class="orderbtn" id="Scarpariello">
             <b>add to order</b>
         </button>
         <hr>
@@ -96,7 +98,7 @@
         <p><b>Components: Italian Tomatoes, Fresh Mozzarella, Salami, Chilli flakes, Fresh Basil, Parmigiano Reggiano
                 DOP, Extra Virgin Olive Oil </b></p>
         <p><b><i>270 LE</i></b></p>
-        <button class="orderbtn">
+        <button class="orderbtn" id="Diavola">
             <b>add to order</b>
         </button>
         <hr>
@@ -111,7 +113,7 @@
         <p><b>Components: Italian Tomatoes, Fresh Mozzarella, Anchovies, Fresh Basil, Parmigiano Reggiano DOP, Extra
                 Virgin Olive Oil </b></p>
         <p><b><i>285 LE</i></b></p>
-        <button class="orderbtn">
+        <button class="orderbtn" id="Romana">
             <b>add to order</b>
         </button>
         <hr>
@@ -123,15 +125,31 @@
     <h3>the wild one</h3>
     <br>
     <p>The ‘Capricious’ brings together a medley of flavour with its blend of mushrooms, air-dried salami and sautéed
-        artichokes.p>
+        artichokes. </p>
     <p><b>Components: Italian Tomatoes, Fresh Mozzarella, Mushrooms, Salami, Sliced Artichokes, Fresh Basil, Parmigiano
             Reggiano DOP, Extra Virgin Olive Oil</b></p>
     <p><b><i>295 LE</i></b></p>
-    <button class="orderbtn">
+    <button class="orderbtn" id="Capricciosa">
         <b>add to order</b>
     </button>
     <hr>
 </div>
+<div class="menuItem">
+    <h3>Your Order:</h3>
+    <div class="ordersContainer" id="ordersContainer">
+        <!--  
+            ###### order item div example #####
+
+        <div class="orderItem" id="orderItem">
+            <div class="itemLabel">1 Romana</div>
+            <script src="https://cdn.lordicon.com/ritcuqlt.js"></script>
+            <lord-icon class="removebtn" src="https://cdn.lordicon.com/kfzfxczd.json" trigger="click"
+                colors="primary:#e4d2b2">
+            </lord-icon>
+        </div>
+        -->
+    </div>
+    <button class="confirmbtn" id="confirmbtn"><b>Confirm Order</b></button>
 
 </html>
 <script type="module" src="menuController.js"></script>

@@ -33,8 +33,69 @@
         }       
     </script>
     <div class="firstDiv"></div>
+
+    <div class="slideshow-container">
+
+        <div class="mySlides fade">
+            <img class="slideshowImage" src="assets/slideshow image 1.jpeg">
+        </div>
+
+        <div class="mySlides fade">
+            <img class="slideshowImage" src="assets/slideshow image 2.JPG">
+        </div>
+
+        <div class="mySlides fade">
+            <img class="slideshowImage" src="assets/slideshow image 3.JPG">
+        </div>
+
+        <div class="mySlides fade">
+            <img class="slideshowImage" src="assets/slideshow image 4.JPG">
+        </div>
+
+        <div class="mySlides fade">
+            <img class="slideshowImage" src="assets/slideshow image 5.JPG">
+        </div>
+
+        <div class="mySlides fade">
+            <img class="slideshowImage" src="assets/slideshow image 6.JPG">
+        </div>
+
+
+    </div>
+
+
+    <div style="text-align:center">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+    </div>
+    <script>
+        var slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) { slideIndex = 1 }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+            setTimeout(showSlides, 5000); // Change image every 5 seconds
+        }
+    </script>
+
     <br>
-    <div class="firstDiv"></div>
+
     <div class="Book_Table_Btn">
         <p>Book A Table</p>
     </div>
@@ -44,6 +105,8 @@
             <p>Discover Our Menu</p>
         </div>
     </a>
+    <div class="marginDiv"></div>
+
 </body>
 
 </html>
