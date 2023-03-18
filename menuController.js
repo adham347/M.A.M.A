@@ -27,6 +27,29 @@ function addToOrder(name) {
     console.log(orders);
 }
 
+function createOrderItemDiv(btn) {
+    let item = document.createElement("div");
+    item.setAttribute("class", "orderItem");
+
+    let itemLabel = document.createElement("div");
+    itemLabel.setAttribute("class", "itemLabel");
+    itemLabel.innerHTML = "1 " + btn.id;
+
+    let iconScript = document.createElement("script");
+    iconScript.setAttribute("src", "https://cdn.lordicon.com/ritcuqlt.js");
+
+    let icon = document.createElement("lord-icon");
+    icon.setAttribute("class", "removebtn");
+    icon.setAttribute("src", "https://cdn.lordicon.com/kfzfxczd.json");
+    icon.setAttribute("trigger", "click");
+    icon.setAttribute("colors", "primary:#e4d2b2");
+
+    document.getElementById("ordersContainer").appendChild(item);
+    item.appendChild(itemLabel);
+    item.appendChild(iconScript);
+    item.appendChild(icon);
+}
+
 const btns = document.querySelectorAll("button");
 btns.forEach(btn => {
     if (btn.id != "confirmbtn")
@@ -40,9 +63,7 @@ btns.forEach(btn => {
                     if (skip) {
                         return;
                     }
-                    console.log(label.innerHTML);
                     let splittedLabel = label.innerHTML.split(' ');
-                    console.log(splittedLabel);
                     if (splittedLabel[1] == btn.id) {
                         found = true;
                         let count = parseInt(splittedLabel[0]);
@@ -53,49 +74,11 @@ btns.forEach(btn => {
                     }
                 });
                 if (found == false) {
-                    let item = document.createElement("div");
-                    item.setAttribute("class", "orderItem");
-
-                    let itemLabel = document.createElement("div");
-                    itemLabel.setAttribute("class", "itemLabel");
-                    itemLabel.innerHTML = "1 " + btn.id;
-
-                    let iconScript = document.createElement("script");
-                    iconScript.setAttribute("src", "https://cdn.lordicon.com/ritcuqlt.js");
-
-                    let icon = document.createElement("lord-icon");
-                    icon.setAttribute("class", "removebtn");
-                    icon.setAttribute("src", "https://cdn.lordicon.com/kfzfxczd.json");
-                    icon.setAttribute("trigger", "click");
-                    icon.setAttribute("colors", "primary:#e4d2b2");
-
-                    document.getElementById("ordersContainer").appendChild(item);
-                    item.appendChild(itemLabel);
-                    item.appendChild(iconScript);
-                    item.appendChild(icon);
+                    createOrderItemDiv(btn);
                 }
             }
             else {
-                let item = document.createElement("div");
-                item.setAttribute("class", "orderItem");
-
-                let itemLabel = document.createElement("div");
-                itemLabel.setAttribute("class", "itemLabel");
-                itemLabel.innerHTML = "1 " + btn.id;
-
-                let iconScript = document.createElement("script");
-                iconScript.setAttribute("src", "https://cdn.lordicon.com/ritcuqlt.js");
-
-                let icon = document.createElement("lord-icon");
-                icon.setAttribute("class", "removebtn");
-                icon.setAttribute("src", "https://cdn.lordicon.com/kfzfxczd.json");
-                icon.setAttribute("trigger", "click");
-                icon.setAttribute("colors", "primary:#e4d2b2");
-
-                document.getElementById("ordersContainer").appendChild(item);
-                item.appendChild(itemLabel);
-                item.appendChild(iconScript);
-                item.appendChild(icon);
+                createOrderItemDiv(btn);
             }
         });
 });
