@@ -20,12 +20,8 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
+const fs = getFirestore(app);
 
-var orders = [];
-function addToOrder(name) {
-    orders.push(name);
-    console.log(orders);
-}
 
 function createOrderItemDiv(btn) {
     let item = document.createElement("div");
@@ -43,6 +39,19 @@ function createOrderItemDiv(btn) {
     icon.setAttribute("src", "https://cdn.lordicon.com/kfzfxczd.json");
     icon.setAttribute("trigger", "click");
     icon.setAttribute("colors", "primary:#e4d2b2");
+    icon.setAttribute("id", "remove" + btn.id);
+    icon.addEventListener("click", () => {
+        let label = icon.parentElement.firstChild.innerHTML.split(' ');
+        let count = parseInt(label[0]);
+        if (count > 1) {
+            count--;
+            icon.parentElement.firstChild.innerHTML = count + " " + label[1];
+        }
+        else {
+            icon.parentElement.remove();
+        }
+        alert("Item Removed");
+    })
 
     document.getElementById("ordersContainer").appendChild(item);
     item.appendChild(itemLabel);
@@ -50,13 +59,14 @@ function createOrderItemDiv(btn) {
     item.appendChild(icon);
 }
 
+
+
 const btns = document.querySelectorAll("button");
 btns.forEach(btn => {
     if (btn.id != "confirmbtn")
         btn.addEventListener("click", () => {
             let skip = false;
             let found = false;
-            addToOrder(btn.id);
             let allItemLabels = document.querySelectorAll(".itemLabel");
             if (allItemLabels.length > 0) {
                 allItemLabels.forEach(label => {
@@ -80,5 +90,34 @@ btns.forEach(btn => {
             else {
                 createOrderItemDiv(btn);
             }
+            alert("Item Added");
+        });
+});
+var order = [];
+const confirmbtn = document.getElementById("confirmbtn");
+confirmbtn.addEventListener("click", () => {
+    const orderItems = document.querySelectorAll(".itemLabel");
+    orderItems.forEach(orderItem => {
+        order.push(orderItem.innerHTML);
+    });
+    console.log(order);
+    const date = new Date();
+    let minute = date.getMinutes();
+    let hour = date.getHours();
+    let currentTime = `${hour}:${minute}`;
+    const docData = {
+        table: 1,
+        order: order,
+        receivedAt: currentTime
+    };
+    var docRef = doc(collection(fs, "orders"));
+    setDoc(docRef, docData).then(() => {
+        alert("Order Confirmed!");
+        location.reload();
+
+    })
+        .catch((error) => {
+            // The write failed...
+            alert(error);
         });
 });
