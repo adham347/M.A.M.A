@@ -108,7 +108,8 @@ confirmbtn.addEventListener("click", () => {
     const docData = {
         table: 1,
         order: order,
-        receivedAt: currentTime
+        receivedAt: currentTime,
+        timestamp: Timestamp.fromDate(new Date())
     };
     var docRef = doc(collection(fs, "orders"));
     setDoc(docRef, docData).then(() => {

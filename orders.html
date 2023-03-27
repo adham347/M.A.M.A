@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>M.A.M.A</title>
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no"
+        name="viewport" />
+    <link rel="stylesheet" type="text/css" href="main.css" />
+</head>
+
+<body>
+    <nav>
+        <a href="index.html"><img class="navlogo" src="assets/mamaLogo.jpg"></a>
+        <a onclick="openNav()"><img class="NavIcon" src="assets/menu icon.png"></a>
+    </nav>
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="index.html" class="active">Home</a>
+    </div>
+    <script>
+        /* Set the width of the side navigation to 250px and the left margin of the page content to 250px */
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+            document.getElementById("main").style.marginLeft = "250px";
+        }
+
+        /* Set the width of the side navigation to 0 and the left margin of the page content to 0 */
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+            document.getElementById("main").style.marginLeft = "0";
+        }       
+    </script>
+    <div class="firstDiv"></div>
+    <h2>Orders</h2>
+    <script type="module" src="ordersController.js"></script>
+    <div class="ordersContainer" id="ordersContainer">
+        <!-- 
+        <div class="menuItem">
+            <hr>
+            <h3>Table 1</h3>
+            <br>
+            <p>2 Capricciosa</p>
+            <p>2 El Pesto</p>
+            <p><b>Order Received At:</b></p>
+            <button class="orderbtn" id="Capricciosa">
+                <b>order done</b>
+            </button>
+            <hr>
+        </div>
+        -->
+    </div>
+
+
+</body>
+
+</html>
