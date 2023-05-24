@@ -166,7 +166,6 @@ nav {
 
 .slideshowImage {
     height: 45vh;
-    width: 100vw;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
@@ -397,4 +396,83 @@ a:hover {
     position: relative;
     bottom: 0px;
     margin-bottom: 0px;
+}
+
+.formContainer {
+
+    background-color: #c8c2a6;
+    width: 80%;
+    margin-top: 50px;
+    margin: auto;
+
+}
+
+.surroundings {
+    width: 100vw;
+    height: 100vh;
+    box-shadow: 0 1px 300px 0 rgba(0, 0, 0, 0.2), 0 1px 300px 0 rgba(0, 0, 0, 0.2) inset;
+}
+
+.loginBox {
+    height: auto;
+    width: 60vw;
+    background-color: #544d47;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 1px 20px 0 rgba(0, 0, 0, 0.2), 0 1px 20px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    border: solid #e4d2b2;
+    padding: 15 px;
+    font-size: large;
+
+}
+
+.loginBox h2 {
+    color: #e4d2b2;
+}
+
+input[type=text],
+input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #e4d2b2;
+    color: #544d47;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    font-size: large;
+
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+.container {
+    padding: 16px;
+    color: #DFBF84;
+}
+
+.otherOptions {
+    padding: 16px;
+}
+
+@media only screen and (max-width: 600px) {
+
+    .loginBox {
+        width: 85vw;
+        height: 90vh;
+    }
 }
